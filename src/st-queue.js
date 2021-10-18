@@ -15,13 +15,13 @@ const { ListNode } = require('../extensions/list-node.js');
  */
  module.exports = class Queue {
   constructor() {
-    this.head = null;
-    this.tail = null;
-    this.length = 0;
+    this.head = null
+    this.tail = null
+    this.length = 0
   }
 
   getUnderlyingList() {
-    return this.head;
+    return this.head
   }
 
   enqueue(value) {
@@ -30,18 +30,18 @@ const { ListNode } = require('../extensions/list-node.js');
 			next: null,
 		}
 		if (this.tail) {
-			this.tail.next = node;
+			this.tail.next = node
 		}
 		if (!this.head) {
-			this.head = node;
+			this.head = node
 		}
-		this.tail = node;
+		this.tail = node
 	}
 
   dequeue() {
-    const current = this.head;
-    this.head = this.head.next;
-    return current.value;
+    const current = this.head
+    this.head = this.head.next
+    return current.value
   }
 
 }
